@@ -40,7 +40,7 @@ setInterval(
 					if (pairDsymbol === "BTC") {
 						BTCPrice = priceDsymbol;
 					} else {
-						BTCPrice = getPrice("BTC","USD",tradeDate);
+						BTCPrice = getPrice(priceDsymbol,"USD",tradeDate);
 					}
 					feePrice = BNBPrice*fee.split(" ")[0];
 					p = price*priceDsymbol;
