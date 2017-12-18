@@ -1,0 +1,16 @@
+{  
+    "manifest_version": 2,  
+    "name": "Binance history helper",  
+    "version": "1",  
+    "description": "Binance history helper",  
+    "content_scripts": [  
+        {  
+            "matches": ["https://*.binance.com/userCenter/tradeHistory.html"],  
+            "js": ["jquery.js","bg.js"]  
+        }  
+    ],  
+    "permissions": [  
+        "https://min-api.cryptocompare.com/*"  ,
+        "https://*.binance.com/*"
+    ]
+}  
