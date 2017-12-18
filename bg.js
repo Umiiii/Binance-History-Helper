@@ -37,14 +37,9 @@ setInterval(
 					pairDsymbol = pair.split("/")[1]
 					priceDsymbol = getPrice(pairDsymbol,"USD",tradeDate);
 					BNBPrice = getPrice("BNB","USD",tradeDate);
-					if (pairDsymbol === "BTC") {
-						BTCPrice = priceDsymbol;
-					} else {
-						BTCPrice = getPrice(priceDsymbol,"USD",tradeDate);
-					}
 					feePrice = BNBPrice*fee.split(" ")[0];
 					p = price*priceDsymbol;
-					totalPrice = BTCPrice*total.split(" ")[0];
+					totalPrice = priceDsymbol*total.split(" ")[0];
 					// priceCell.innerText = price + "*$"+priceDsymbol+"=$"+p.toFixed(2);
 					// feeCell.innerText = price + "*$" + BNBPrice +"=$"+feePrice.toFixed(2);
 					priceCell.innerText = "$"+p.toFixed(2);
